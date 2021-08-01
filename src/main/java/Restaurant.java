@@ -66,4 +66,12 @@ public class Restaurant {
         return name;
     }
 
+    public int getOrderPrice(List<String> items) {
+        int orderPrice = 0;
+        for(String itemName: items){
+            orderPrice += findItemByName(itemName).getPrice();
+        }
+        return orderPrice;
+    }
+
 }
